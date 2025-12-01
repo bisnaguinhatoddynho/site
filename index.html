@@ -14,14 +14,14 @@
       overflow: hidden;
     }
 
-    /* Fundo com vídeo levemente “abaixado” */
+    /* Fundo com vídeo – BEM mais abaixado */
     .bg video {
       position: fixed;
-      top: 50%;
+      top: 70%; /* antes era 50%, agora desce mais */
       left: 50%;
-      min-width: 110%;
-      min-height: 110%;
-      transform: translate(-50%, -40%);
+      min-width: 120%;
+      min-height: 120%;
+      transform: translate(-50%, -55%);
       object-fit: cover;
       z-index: -2;
     }
@@ -31,6 +31,20 @@
       inset: 0;
       background: rgba(0,0,0,0.35);
       z-index: -1;
+    }
+
+    /* Texto no topo */
+    .top-text {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 16px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: lowercase;
     }
 
     /* Relógio */
@@ -81,8 +95,8 @@
     }
 
     .icon img {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
     }
 
     .app:hover .icon {
@@ -102,6 +116,9 @@
 
   <div class="overlay"></div>
 
+  <!-- Texto no topo -->
+  <div class="top-text">qual é a boa de hoje davi?</div>
+
   <!-- Relógio -->
   <div class="clock" id="clock">--:--:--</div>
 
@@ -113,7 +130,7 @@
     </a>
 
     <a class="app" href="https://plural.net.br" target="_blank">
-      <div class="icon"><img src="https://static.plurall.net/assets/app-icon.png"></div>
+      <div class="icon"><img src="plural-logo.png"></div>
       Plural
     </a>
 
