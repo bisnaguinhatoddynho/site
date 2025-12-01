@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Painel do Davi</title>
+  <title>Painel</title>
 
   <style>
     body {
@@ -14,40 +14,23 @@
       overflow: hidden;
     }
 
-    /* Fundo com vídeo */
+    /* Fundo com vídeo levemente “abaixado” */
     .bg video {
       position: fixed;
       top: 50%;
       left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
+      min-width: 110%;
+      min-height: 110%;
+      transform: translate(-50%, -40%);
       object-fit: cover;
       z-index: -2;
     }
 
-    /* Camada escura */
     .overlay {
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.35);
       z-index: -1;
-    }
-
-    /* Nome no topo */
-    .title {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 32px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-shadow: 0 0 12px rgba(0,0,0,0.8);
-      background: rgba(0,0,0,0.35);
-      padding: 6px 20px;
-      border-radius: 14px;
-      backdrop-filter: blur(6px);
     }
 
     /* Relógio */
@@ -110,7 +93,7 @@
 
 <body>
 
-  <!-- Vídeo de fundo -->
+  <!-- Fundo em vídeo -->
   <div class="bg">
     <video autoplay muted loop playsinline>
       <source src="https://i.melhoresmemes.com/videos/nego-nei.mp4" type="video/mp4">
@@ -118,9 +101,6 @@
   </div>
 
   <div class="overlay"></div>
-
-  <!-- Nome no topo -->
-  <div class="title">DAVI</div>
 
   <!-- Relógio -->
   <div class="clock" id="clock">--:--:--</div>
@@ -133,7 +113,7 @@
     </a>
 
     <a class="app" href="https://plural.net.br" target="_blank">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/3039/3039388.png"></div>
+      <div class="icon"><img src="https://static.plurall.net/assets/app-icon.png"></div>
       Plural
     </a>
 
@@ -154,6 +134,7 @@
   </div>
 
   <script>
+    // Relógio
     function updateClock() {
       const now = new Date();
       const h = String(now.getHours()).padStart(2, '0');
@@ -167,4 +148,3 @@
 
 </body>
 </html>
-
